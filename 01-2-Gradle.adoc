@@ -29,7 +29,9 @@ Computation
 ----
 
 . Add the `java` and the `application` plugins to the build configuration script _build.gradle_. 
+
 +
+
 [source,gradle]
 ----
 apply plugin: 'java'

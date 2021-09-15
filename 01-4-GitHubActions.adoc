@@ -7,7 +7,7 @@ Conitnuous integration (CI) is at the core of Agile development. The act of writ
 . Go to your repository and select _Actions_ in the repository menu tab. 
 
 . Select _set up a workflow yourself_ linked just below the title.
-image:figs/githubactions1.png[]
+image::figs/githubactions1.png[]
 
 . Modify the contents of the main.yml to have the following content:
 
@@ -17,9 +17,9 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches: main
   pull_request:
-    branches: [ $default-branch ]
+    branches: main
 
 jobs:
   build:
@@ -38,10 +38,10 @@ jobs:
       uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-      working-directiory: EventRegistration-Backend
+      working-directory: EventRegistration-Backend
     - name: Build with Gradle
       run: ./gradlew build
-      working-directiory: EventRegistration-Backend
+      working-directory: EventRegistration-Backend
 ----
 
 [NOTE]
@@ -51,12 +51,12 @@ All that's left to do is test to make sure it works. Go to local working copy of
 
 The result of workflow runs can be seen under the _Actions_ tab of the repository.
 
-image:figs/GitProj2.png[Results of workflow run,width=600]
+image::figs/GitProj2.PNG[Results of workflow run, width=600]
 
 To gain more insight into a workflow run, select the workflow run from the list . Even more insight can be gleaned from independent jobs by selecting them from the list of jjobs as well.
 
-image:figs/GitProj3.png[Workflow run details,width=600]
+image::figs/GitProj3.PNG[Workflow run details, width=600]
 
-image:figs/GitProj4.png[Job details,width=600]
+image::figs/GitProj4.PNG[Job details, width=600]
 
 *DEBUGGING EXERCISE:* _Why did the build fail? How would you fix it?_
