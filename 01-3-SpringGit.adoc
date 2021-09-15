@@ -13,7 +13,7 @@ We will return to the details of Spring later. For now, our only concern is sett
 ==== Application Project Setup
 
 . Create a new repository under your account on GitHub for an example application that we are going to develop throughout the semester. Name the repository *eventregistration*. See more on the specification of the application functionality later. +
-image::figs/eventregistration-repo.png[Create new eventregistration repo,width=600]
+image::figs/eventregistration-repo.png[]
 
 . Clone it somewhere on your disk. We assume you cloned it to _~/git/eventregistration_.
 
@@ -94,11 +94,11 @@ One of the core components of Agile development is being able to manage the deve
 
 Any repository can be added to a project by selecting the _Create New Project_ button located in the _Project_ tab of the repository. 
 
-image::figs/GitProj5.PNG[GitHub project creation,width=600]
+image::figs/GitProj5.PNG[]
 
 Below is the layout of the Basic KanBan Board.
 
-image::figs/GitProj6.PNG[GitHub project KanBan board,width=600]
+image::figs/GitProj6.PNG[]
 
 By default there are three columns: *To do*, *In progress* and *Done*. More columns can be added by clicking the add column area. 
 
