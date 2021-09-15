@@ -116,7 +116,7 @@ image::figs/GitProj9.PNG[GitHub project automation result]
 
 To help with better management of the project as you move through project phases, it is prudent to add Milestones. A new milestone can be created by selecting the _Issues_ tab in the repository, and selecting the _Milestones_ tab located next to the _New issue_ button. 
 
-image::figs/GitProj10.PNG[GitHub project milestone creation,width=600]
+image::figs/GitProj10.PNG[GitHub project milestone creation]
 
 To create a new milestone, select the _New Milestone_ button. Then, fill out the form with an appropriate name, due date and description. Once your milestone has been created, you can attach issues to the milestone and see their progress by selecting the _Milestones_ tab.
 
