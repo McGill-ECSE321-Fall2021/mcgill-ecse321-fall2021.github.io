@@ -13,7 +13,7 @@ We will return to the details of Spring later. For now, our only concern is sett
 ==== Application Project Setup
 
 . Create a new repository under your account on GitHub for an example application that we are going to develop throughout the semester. Name the repository *eventregistration*. See more on the specification of the application functionality later. +
-image::figs/eventregistration-repo.png[]
+image::figs/eventregistration-repo.png[Event Registration Repo]
 
 . Clone it somewhere on your disk. We assume you cloned it to _~/git/eventregistration_.
 
