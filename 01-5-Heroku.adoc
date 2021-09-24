@@ -1,6 +1,6 @@
 === Heroku
 
-Heroku is a cloud based PaaS (Poftware as a Service) that allow the development, deployment and operation of applications. In this course, Heroku will be used as a host for our application backend (this includes the database).
+Heroku is a cloud based PaaS (Platform as a Service) that allow the development, deployment and operation of applications. In this course, Heroku will be used as a host for our application backend (this includes the database).
 
 ==== Preparations
 
@@ -9,7 +9,7 @@ Heroku is a cloud based PaaS (Poftware as a Service) that allow the development,
 . Install the command line client for Heroku: https://devcenter.heroku.com/articles/heroku-cli[Heroku CLI]
 +
 
-. Log in to Heroku CLI by opening a terminal an typing: `heroku login`.
+. Log in to Heroku CLI by opening a terminal and typing: `heroku login -i`. Enter your username and your password.
 
 ==== Creating a Heroku app
 
@@ -20,7 +20,7 @@ All actions described here for configuring Heroku applications using the Heroku 
 
 . Once you are logged in with the Heroku-CLI, create a new Heroku application: in the root of the git repository of your repository (assumed to be _~/git/eventregistration_), issue `heroku create eventregistration-backend-<UNIQUE_ID> -n` to create an application named "eventregistration-backend-<UNIQUE_ID>". +
 [NOTE]
-In Heroku, the application name should be unique Heroku-wise, that is, each application in Heroku's system should have a unique name. If you don't provide a name parameter for the command, Heroku will randomly generate one.
+In Heroku, the application name should be unique Heroku-wise, that is, each application in Heroku's system should have a unique name. If you don't provide a name parameter for the command, Heroku will randomly generate one. Make sure the value selected for <UNIQUE_ID> is alphanumeric and ends in letters. When entering a value for UNIQUE_ID replace "<UNIQUE_ID>" with this value. Do not include the "<>" in your command. This is a delimiter to indicate a parameter. 
 
 . Add the link:https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-multi-procfile[multi procfile] and link:https://elements.heroku.com/buildpacks/heroku/heroku-buildpack-gradle[Gradle] buildpacks to the app.
 +
@@ -124,7 +124,7 @@ web: java -jar EventRegistration-Backend/build/libs/EventRegistration-Backend-0.
 
 . Add the Procfile to a new commit
 
-. Configure the multi-procfile buildpack to find the Procfile: 
+. Configure the multi-procfile buildpack to find the Procfile (this is a terminal/cmd/powershell command): 
 +
 [source,bash]
 ----
@@ -160,12 +160,12 @@ origin	git@github.com:imbur/eventregistration.git (push)
 . Deploy your application with
 +
 [source,bash]
-git push backend-heroku master
+git push backend-heroku main
 +
 [NOTE]
-If it fails to build, make sure you try understanding the output. Typical issue: buildpacks are not added/are not in the right order.
+If it fails to build, make sure you try understanding the output. Typical issue: buildpacks are not added/are not in the right order, failing tests, etc. (If you did not fix the build from the previous section, then pushing to the Heroku repository will fail, as Heroku cannot deploy an application it can't build). 
 
-. Visit the link provided in the build output. It may take some time (even 30-60 seconds) for the server to answer the first HTTP request, so be patient!
+. If build and deployment are a success, visit the link provided in the build output. It may take some time (even 30-60 seconds) for the server to answer the first HTTP request, so be patient!
 
 . Save your work to the GitHub repository, too: `git push origin master` +
 Final layout of the files (only two directory levels are shown and hidden items are suppressed): +
