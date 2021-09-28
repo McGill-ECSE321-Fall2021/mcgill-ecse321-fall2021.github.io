@@ -6,13 +6,13 @@ Before moving on the the subsequent step it is necessary to ensure that the Even
 
 The general flow for debugging can be seen in the image below.
 
-image::figs/debug.png[]
+image::figs/debug.PNG[]
 
 When addressing an error/bug during a build process, building locally takes precedence for several reasons, the most important of which is mitigating error/bug propagation to others working on the same branch within the same project. In addition to this, it's easier to access debugging logs locally than remotely on GitHub or Heroku, especially when an internet connection is unreliable. 
 
 The process then propagates to committing and pushing the changes to GitHub, checking that GitHub Actions successfully builds. If the build fails, it is possible to check the workflow log to see why. To gain more insight if the details are not enough, link:https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/enabling-debug-logging[additional debug logging] can be enabled.
 
-image::figs/Details.png[]
+image::figs/Details.PNG[]
 
 Finally, the project is deployed to Heroku. The same general process used for GitHub Actions can be used for Heroku. Heroku build logs can be seen when executing: +
 
@@ -21,11 +21,11 @@ Finally, the project is deployed to Heroku. The same general process used for Gi
 git push backend-heroku main
 ----
 
-image::figs/HerokuFail.png[]
+image::figs/HerokuFail.PNG[]
 
 or through the web interface under the Overview tab: 
 
-image::figs/HerokuLog.png[]
+image::figs/HerokuLog.PNG[]
 
 A live demonstration of this process will be given in your tutorial section.
 
@@ -35,7 +35,7 @@ The *_ suggested potential_* fixes implemented to allow the Event Registration P
 
 * Comment out the following lines in the *_EventRegistrationApplicationTests.java_* file (they will be reactivated later):
 
-image::figs/commentsTest.png[]
+image::figs/commentsTest.PNG[]
 
 * Modify the _gradle.settings_ file at the root of the project to match the following (The value for the _rootProject.name_ property should match the name of your root directory): +
 [source, gradle]
