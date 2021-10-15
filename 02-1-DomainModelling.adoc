@@ -64,7 +64,7 @@ This is an exercise in being able to write JPA compliant code simply by looking 
 
 * *@Entity*: Placed before the class declaration to signify an entity.
 * *@Id*: Placed before the get method for the attribute that will serve as the primary identifier for the class.
-* *@OnetoMany* or *@ManytoOne*: Placed before set method for attribute to signify the multiplicity in associative relationship between the current class and reference class. The first word is the multiplicity of the current class, with the other representing the multiplicity of the other calss. The _cascade_ property being set to _cascadeType.ALL_ ensures all operations of the defining class are persisted. The _optional_ property being set to false means the association the tag defines must exist. In this case, the defining class cannot exist without knowledge of the referenced class. 
+* *@OnetoMany* or *@ManytoOne*: Placed before get method for attribute to signify the multiplicity in associative relationship between the current class and reference class. The first word is the multiplicity of the current class, with the other representing the multiplicity of the other calss. The _cascade_ property being set to _cascadeType.ALL_ ensures all operations of the defining class are persisted. The _optional_ property being set to false means the association the tag defines must exist. In this case, the defining class cannot exist without knowledge of the referenced class. 
 
 Once your java code has been annotated, create a new folder under _src>main>java_ called model and add the model files into that folder. Make sure your model files declare the package:
 
