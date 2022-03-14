@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.17">
-<title>ECSE 321 Introduction to Software Engineering: Tutorial</title>
+<title>Project Management Tools and Development Toolchain</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -436,64 +436,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body class="article toc2 toc-left">
+<body class="article">
 <div id="header">
-<h1>ECSE 321 Introduction to Software Engineering: Tutorial</h1>
-<div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_project_management_tools_and_development_toolchain">1. Project Management Tools and Development Toolchain</a>
-<ul class="sectlevel2">
-<li><a href="#_git">1.1. Git</a></li>
-<li><a href="#_gradle_a_build_framework_and_brief_example">1.2. Gradle: A Build Framework and Brief Example</a></li>
-<li><a href="#_spring_boot_projects_and_github_project_management">1.3. Spring Boot Projects and GitHub Project Management</a>
-<ul class="sectlevel3">
-<li><a href="#_spring_boot_cli_installation">1.3.1. Spring Boot CLI Installation</a></li>
-<li><a href="#_application_project_setup">1.3.2. Application Project Setup</a></li>
-<li><a href="#_github_repository_project">1.3.3. GitHub Repository Project</a></li>
-</ul>
-</li>
-<li><a href="#_github_actions_for_continuous_integration">1.4. GitHub Actions for Continuous Integration</a>
-<ul class="sectlevel3">
-<li><a href="#_setup_ci_workflow_and_template">1.4.1. Setup CI Workflow and Template</a></li>
-</ul>
-</li>
-<li><a href="#_heroku">1.5. Heroku</a>
-<ul class="sectlevel3">
-<li><a href="#_preparations">1.5.1. Preparations</a></li>
-<li><a href="#_creating_a_heroku_app">1.5.2. Creating a Heroku app</a></li>
-<li><a href="#_adding_a_database_to_the_application">1.5.3. Adding a database to the application</a></li>
-<li><a href="#_extending_the_build_for_the_heroku_deployment_environment">1.5.4. Extending the build for the Heroku deployment environment</a></li>
-<li><a href="#_supply_application_specific_setting_for_heroku">1.5.5. Supply application-specific setting for Heroku</a></li>
-<li><a href="#_deploying_the_app">1.5.6. Deploying the app</a></li>
-</ul>
-</li>
-<li><a href="#_a_quick_lesson_in_debugging">1.6. A Quick Lesson In Debugging</a>
-<ul class="sectlevel3">
-<li><a href="#_debugging_flow">1.6.1. Debugging Flow</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Sections of the tutorial will continuously be published at this web page.</p>
-</div>
-<div class="paragraph">
-<p>This tutorial serves to give you the practical knowledge required to execute the group project in true AGILE fashion.</p>
-</div>
-</div>
-</div>
 <div class="sect1">
-<h2 id="_project_management_tools_and_development_toolchain">1. Project Management Tools and Development Toolchain</h2>
+<h2 id="_project_management_tools_and_development_toolchain">Project Management Tools and Development Toolchain</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_git">1.1. Git</h3>
+<h3 id="_git">Git</h3>
 <div class="paragraph">
 <p>For our purposes, git is a software tool for tracking changes across application code files and for coordinating work between various programmers working on the same application source code during the application&#8217;s development and life cycle.</p>
 </div>
@@ -543,7 +494,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_gradle_a_build_framework_and_brief_example">1.2. Gradle: A Build Framework and Brief Example</h3>
+<h3 id="_gradle_a_build_framework_and_brief_example">Gradle: A Build Framework and Brief Example</h3>
 <div class="paragraph">
 <p>This section focuses on writing a Gradle (<a href="https://gradle.org/" class="bare">https://gradle.org/</a>) build script that builds a single Gradle project referred to as <em>Computation</em>. The source code and tests for a Java application is available here: <a href="https://github.com/McGill-ECSE321-Fall2020/ecse321-tutorial-notes/raw/master/resources/Computation.zip">Computation.zip</a>. It is your job to create/reorganize the folder called <em>Computation</em>, move sources and tests into that folder, and produce the Gradle build script <em>build.gradle</em> within this folder to automate the software build and testing process for this example project.</p>
 </div>
@@ -688,12 +639,12 @@ The <code>settings.gradle</code> and its usage is to be shown later.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_spring_boot_projects_and_github_project_management">1.3. Spring Boot Projects and GitHub Project Management</h3>
+<h3 id="_spring_boot_projects_and_github_project_management">Spring Boot Projects and GitHub Project Management</h3>
 <div class="paragraph">
 <p>This section touches on the use of Spring Initializer and explores the GitHub Project interface.</p>
 </div>
 <div class="sect3">
-<h4 id="_spring_boot_cli_installation">1.3.1. Spring Boot CLI Installation</h4>
+<h4 id="_spring_boot_cli_installation">Spring Boot CLI Installation</h4>
 <div class="paragraph">
 <p>Spring Boot is an open source framework for creating stand-alone Java-based applications. This is accomplished through the Spring Framework, which provides developers a comprehensive programming and configuration model for their Java applications.</p>
 </div>
@@ -732,7 +683,7 @@ Don&#8217;t forgot to add the proper dependencies.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_application_project_setup">1.3.2. Application Project Setup</h4>
+<h4 id="_application_project_setup">Application Project Setup</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -821,7 +772,7 @@ git push</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_github_repository_project">1.3.3. GitHub Repository Project</h4>
+<h4 id="_github_repository_project">GitHub Repository Project</h4>
 <div class="paragraph">
 <p>One of the core components of Agile development is being able to manage the development problem space. GitHub projects extends GitHub&#8217;s utility to make problem space management easy.</p>
 </div>
@@ -938,12 +889,12 @@ git push</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_github_actions_for_continuous_integration">1.4. GitHub Actions for Continuous Integration</h3>
+<h3 id="_github_actions_for_continuous_integration">GitHub Actions for Continuous Integration</h3>
 <div class="paragraph">
 <p>Conitnuous integration (CI) is at the core of Agile development. The act of writing, testing and integrating incremental amounts of code often serves to detect errors, bugs and integration pain points sooner.</p>
 </div>
 <div class="sect3">
-<h4 id="_setup_ci_workflow_and_template">1.4.1. Setup CI Workflow and Template</h4>
+<h4 id="_setup_ci_workflow_and_template">Setup CI Workflow and Template</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1033,12 +984,12 @@ The configurations in this YML file are used to determine the environment in whi
 </div>
 </div>
 <div class="sect2">
-<h3 id="_heroku">1.5. Heroku</h3>
+<h3 id="_heroku">Heroku</h3>
 <div class="paragraph">
 <p>Heroku is a cloud based PaaS (Platform as a Service) that allow the development, deployment and operation of applications. In this course, Heroku will be used as a host for our application backend (this includes the database).</p>
 </div>
 <div class="sect3">
-<h4 id="_preparations">1.5.1. Preparations</h4>
+<h4 id="_preparations">Preparations</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1054,7 +1005,7 @@ The configurations in this YML file are used to determine the environment in whi
 </div>
 </div>
 <div class="sect3">
-<h4 id="_creating_a_heroku_app">1.5.2. Creating a Heroku app</h4>
+<h4 id="_creating_a_heroku_app">Creating a Heroku app</h4>
 <div class="paragraph">
 <p>We are creating a Heroku application and deploying the <em>Hello world!</em> Spring example. Additionally, the steps below will make it possible to store multiple different applications in the same git repository and deploy them individually to Heroku. Steps will be shown through the example EventRegistration application, and should be adapted in the course project.</p>
 </div>
@@ -1112,7 +1063,7 @@ Order is important.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_adding_a_database_to_the_application">1.5.3. Adding a database to the application</h4>
+<h4 id="_adding_a_database_to_the_application">Adding a database to the application</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1142,7 +1093,7 @@ The credentials are periodically updated and changed by Heroku, so make sure tha
 </div>
 </div>
 <div class="sect3">
-<h4 id="_extending_the_build_for_the_heroku_deployment_environment">1.5.4. Extending the build for the Heroku deployment environment</h4>
+<h4 id="_extending_the_build_for_the_heroku_deployment_environment">Extending the build for the Heroku deployment environment</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1223,7 +1174,7 @@ Changes to be committed:
 </div>
 </div>
 <div class="sect3">
-<h4 id="_supply_application_specific_setting_for_heroku">1.5.5. Supply application-specific setting for Heroku</h4>
+<h4 id="_supply_application_specific_setting_for_heroku">Supply application-specific setting for Heroku</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1249,7 +1200,7 @@ Changes to be committed:
 </div>
 </div>
 <div class="sect3">
-<h4 id="_deploying_the_app">1.5.6. Deploying the app</h4>
+<h4 id="_deploying_the_app">Deploying the app</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1341,12 +1292,12 @@ Final layout of the files (only two directory levels are shown and hidden items 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_a_quick_lesson_in_debugging">1.6. A Quick Lesson In Debugging</h3>
+<h3 id="_a_quick_lesson_in_debugging">A Quick Lesson In Debugging</h3>
 <div class="paragraph">
 <p>Before moving on the the subsequent step it is necessary to ensure that the Event Registration project builds locally, on GitHub and on Heroku. Without this, we cannot continue building the project.</p>
 </div>
 <div class="sect3">
-<h4 id="_debugging_flow">1.6.1. Debugging Flow</h4>
+<h4 id="_debugging_flow">Debugging Flow</h4>
 <div class="paragraph">
 <p>The general flow for debugging can be seen in the image below.</p>
 </div>
