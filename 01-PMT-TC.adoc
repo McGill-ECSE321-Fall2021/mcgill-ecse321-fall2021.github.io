@@ -11,5 +11,3 @@ include::01-4-GitHubActions.adoc[]
 include::01-5-Heroku.adoc[]
 
 include::01-6-Debugging.adoc[]
-
-

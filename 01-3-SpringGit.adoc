@@ -1,6 +1,6 @@
 === Spring Boot Projects and GitHub Project Management 
 
-This section touches on the use of Spring Boot CLI (command line interface) and explores the GitHub Project interface.
+This section touches on the use of Spring Initializer and explores the GitHub Project interface.
 
 ==== Spring Boot CLI Installation
 
@@ -8,36 +8,31 @@ Spring Boot is an open source framework for creating stand-alone Java-based appl
 
 We will return to the details of Spring later. For now, our only concern is setting it up.
 
-. Install the link:https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-installing-the-cli[Spring Boot CLI] 
+. Navigate to the link:https://start.spring.io/[Spring Initializer] 
+
+. Use the following settings to generate a spring project:
++
+image::figs/SpringInit.png[Spring Initialization Settings] 
++
+[NOTE]
+Don't forgot to add the proper dependencies. 
+
+. Click *Generate* and extract the contents of the zip folder to a location where you can find it later. 
 
 ==== Application Project Setup
 
-. Create a new repository under your account on GitHub for an example application that we are going to develop throughout the semester. Name the repository *eventregistration*. See more on the specification of the application functionality later. +
+. Create a new repository under your account on GitHub for an example application that we are going to develop throughout the semester. Name the repository *eventregistration*. See more on the specification of the application functionality later. 
++
 image::figs/eventregistration-repo.png[Event Registration Repo]
+
 
 . Clone it somewhere on your disk. We assume you cloned it to _~/git/eventregistration_.
 
-. Navigate to that folder in the terminal: `cd ~/eventregistration`.
+. Move the downloaded Spring project folder into the _~/git/eventregistration_ folder.
 
-. Create a project for the backend application using Spring Boot CLI in this repository.
-+
-[source,bash]
-----
-spring init \
- --build=gradle \
- --java-version=1.8 \
- --package=ca.mcgill.ecse321.eventregistration \
- --name=EventRegistration \
- --dependencies=web,data-jpa,postgresql \
- EventRegistration-Backend
-----
-+
-[NOTE]
-Backslashes in this snippet indicate linebreaks in this one liner command typed in the terminal. You can select and copy-paste this snippet as-is.
+. Locate the _EventRegistration-Backend_ folder.
 
-. Navigate to the _EventRegistration-Backend_ folder
-
-. For future use, locate the _application.properties_ file in the _src/_ folder and add the following content: 
+. For future use, locate the _application.properties_ file in the _src/resources_ folder and add the following content: 
 +
 ```
 server.port=${PORT:8080}
@@ -62,10 +57,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 @SpringBootApplication
-public class EventRegistrationApplication {
+public class EventRegistrationBackendApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(EventRegistrationApplication.class, args);
+    SpringApplication.run(EventRegistrationBackendApplication.class, args);
   }
 
   @RequestMapping("/")
@@ -76,10 +71,10 @@ public class EventRegistrationApplication {
 }
 ----
 
-. Verify that it builds with `gradle build -xtest`. +
+. Verify that it builds by running `gradle build -xtest` in the root directory of the backend project (i.e. _~/git/eventregistration/EventRegistration-Backend_). 
 
 . Commit and push the files of the new Spring project.
-+
+
 [source,bash]
 ----
 git add .
